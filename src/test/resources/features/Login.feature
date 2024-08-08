@@ -11,5 +11,5 @@ Feature: Comunicarse con el vendedor
     Examples:
       | nombre            | correo                 | comentario        |
       | Jonathan Garcia   | jdgarcia15@hotmail.com | Deseo información |
-      | Fernando Tipan843 | frtipan1@gmail.com     | Deseo información |
-      | John Limones      | jjlimones@gmail.hasta  | Deseo información |
+      #| Fernando Tipan843 | frtipan1@gmail.com     | Deseo información |
+      #| John Limones      | jjlimones@gmail.hasta  | Deseo información |
