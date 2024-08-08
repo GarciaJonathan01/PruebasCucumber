@@ -91,7 +91,7 @@
                         <include>**/*Test.java</include>
                     </includes>
                     <systemPropertyVariables>
-                        <cucumber.options>--plugin json:target/cucumber-report/cucumber.json</cucumber.options>
+                        <cucumber.options>--plugin json:target/cucumber-report.json</cucumber.options>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>

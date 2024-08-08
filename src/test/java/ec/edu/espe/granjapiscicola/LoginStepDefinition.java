@@ -56,7 +56,6 @@ public class LoginStepDefinition extends BasicStepDefinition {
             addText("Correo electrónico no tiene un formato válido: " + crr);
 
             captureScreenShot();
-            addText("Fin de la prueba");
             driver.quit();
             closePDF();
             fail("Correo electrónico no válido.");
@@ -66,7 +65,6 @@ public class LoginStepDefinition extends BasicStepDefinition {
         } else {
             addText("Nombre no válido. Contiene caracteres no permitidos: " + nam);
             captureScreenShot();
-            addText("Fin de la prueba");
             driver.quit();
             closePDF();
             fail("Nombre no válido.");
