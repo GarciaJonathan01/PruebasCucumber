@@ -25,7 +25,7 @@ public class CotizacionAceptarStepDefinition extends BasicStepDefinition {
     private String crr;
 
 
-    @Given("Quiero enviar la cotizacion")
+    @Given("Quiero enviar la cotizacion.")
     public void quiero_enviar_la_cotizacion() {
         createPDF("Enviar la cotizacion");
         addText("Inicio de prueba: Enviar la cotizacion. Requisito Funcional 05.");
@@ -50,7 +50,7 @@ public class CotizacionAceptarStepDefinition extends BasicStepDefinition {
         }
     }
 
-    @When("Doy click en el bot2 {string} se envian los datos nombre {string} y correo {string}")
+    @When("Doy click en el bot2 {string} se envian los datos nombre {string} y correo {string}.")
     public void doy_click_en_el_bot2_se_envian_los_datos_nombre_y_correo(String bot2, String nombre1, String correo1) {
         try {
             addText("Doy click en el primer producto " + bot2);
@@ -108,7 +108,7 @@ public class CotizacionAceptarStepDefinition extends BasicStepDefinition {
 
     }
 
-    @Then("Se debe validar que los productos y datos se envien correctamente de la lista")
+    @Then("Se debe validar que los productos y datos se envien correctamente de la lista.")
     public void se_debe_validar_que_los_productos_y_datos_se_envien_correctamente_de_la_lista() {
         WebElement submitButton = driver.findElement(new By.ByCssSelector("button[onclick='enviarCotizacion()']"));
         try {
@@ -210,6 +210,7 @@ public class CotizacionAceptarStepDefinition extends BasicStepDefinition {
         addText("Fin de la prueba");
         driver.quit();
         closePDF();
+
     }
 
     public static boolean isValidEmail(String email) {

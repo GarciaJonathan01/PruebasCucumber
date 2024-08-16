@@ -7,7 +7,6 @@ Feature: Cotizar productos
     Given Quiero cotizar productos
     When Doy click en el bot1 "<boton1>"
     Then Se debe validar que los productos se ingresen correctamente en la lista
-
     Examples:
       | boton1 |
       | COTIZAR |
@@ -16,7 +15,6 @@ Feature: Cotizar productos
     Given Quiero cotizar productos
     When Doy click en el bot1 "<boton1>"
     Then Se debe validar que los productos se ingresen correctamente en la lista
-
     Examples:
       | boton1 |
       |   Otro |

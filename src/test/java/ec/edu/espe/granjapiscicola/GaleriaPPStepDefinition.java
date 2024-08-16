@@ -78,6 +78,7 @@ public class GaleriaPPStepDefinition extends BasicStepDefinition {
             closePDF();
             fail("El modal no se muestra correctamente.");
         }
+        addText("Fin de la prueba.");
         driver.quit();
         closePDF();
     }

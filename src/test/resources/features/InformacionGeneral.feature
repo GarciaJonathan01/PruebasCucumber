@@ -7,7 +7,6 @@ Feature: Mostrar Información General
     Given Quiero visualizar informacion
     When Ingreso a la pagina web "<pagina>" visualizo la informacion inicial
     Then Se debe validar que se ingrese correctamente a la pagina web
-
     Examples:
       | pagina               |
       | file:///C:/Users/noobp/OneDrive/Escritorio/Requisitos%20(2)/Requisitos/Pagina_Inicial.html |
@@ -16,10 +15,9 @@ Feature: Mostrar Información General
     Given Quiero visualizar informacion
     When Ingreso a la pagina web "<pagina>" visualizo la informacion inicial
     Then Se debe validar que se ingrese correctamente a la pagina web
-
     Examples:
       | pagina               |
-      | https://youtube.com/ |
+      |https://www.facebook.com/|
 
 
 
