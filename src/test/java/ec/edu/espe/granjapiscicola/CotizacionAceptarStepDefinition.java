@@ -51,7 +51,7 @@ public class CotizacionAceptarStepDefinition extends BasicStepDefinition {
     }
 
     @When("Doy click en el bot2 {string} se envian los datos nombre {string} y correo {string}")
-    public void doy_click_en_el_bot2_se_envian_los_datos_nombre_y_correo(String bot2, String nombre, String correo) {
+    public void doy_click_en_el_bot2_se_envian_los_datos_nombre_y_correo(String bot2, String nombre1, String correo1) {
         try {
             addText("Doy click en el primer producto " + bot2);
             // Crear una instancia de WebDriverWait con Duration
@@ -87,12 +87,12 @@ public class CotizacionAceptarStepDefinition extends BasicStepDefinition {
             fail("No se pudo hacer clic en el botón.");
         }
         try {
-            addText("Ingresamos los datos del formulario con los datos esperados: "+nombre+", "+correo+", "+bot2+".");
+            addText("Ingresamos los datos del formulario con los datos esperados: "+nombre1+", "+correo1+", "+bot2+".");
             WebElement inputName = driver.findElement(new By.ById("name"));
             WebElement inputEmail = driver.findElement(new By.ById("email"));
             WebElement inputComment = driver.findElement(new By.ById("comment"));
-            inputName.sendKeys(nombre);
-            inputEmail.sendKeys(correo);
+            inputName.sendKeys(nombre1);
+            inputEmail.sendKeys(correo1);
             inputComment.sendKeys("Deseo informacion");
         }catch (Exception e){
             addText("No se pudo obtener los datos " + e.getMessage());
@@ -102,8 +102,8 @@ public class CotizacionAceptarStepDefinition extends BasicStepDefinition {
             fail("No se pudo obtener los datos");
         }
 
-        nam=nombre;
-        crr=correo;
+        nam=nombre1;
+        crr=correo1;
         wait(1);
 
     }
