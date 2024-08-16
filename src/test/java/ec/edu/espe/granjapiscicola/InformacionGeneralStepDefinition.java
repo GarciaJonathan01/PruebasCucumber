@@ -25,7 +25,6 @@ public class InformacionGeneralStepDefinition extends BasicStepDefinition {
     }
     @When("Ingreso a la pagina web {string} visualizo la informacion inicial")
     public void ingreso_a_la_pagina_web_visualizo_la_informacion_inicial(String pagina){
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(pagina);
         pag=pagina;

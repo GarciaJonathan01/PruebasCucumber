@@ -34,7 +34,6 @@ public class CotizacionAceptarStepDefinition extends BasicStepDefinition {
         addText("Ingresamos a la página de cotización en la sección de catálogo.");
 
         try {
-            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             driver.manage().window().maximize();
             driver.get("file:///C:/Users/noobp/OneDrive/Escritorio/Requisitos%20(2)/Requisitos/Cotizar.html#");
             wait(1);

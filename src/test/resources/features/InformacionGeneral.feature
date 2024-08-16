@@ -9,8 +9,8 @@ Feature: Mostrar Información General
     Then Se debe validar que se ingrese correctamente a la pagina web
 
     Examples:
-      | pagina               |
-      | file:///C:/Users/noobp/OneDrive/Escritorio/Requisitos%20(2)/Requisitos/Pagina_Inicial.html |
+      |pagina|
+      |file:///C:/Users/noobp/OneDrive/Escritorio/Requisitos%20(2)/Requisitos/Pagina_Inicial.html|
 
   Scenario Outline: Validar que se ingrese correctamente a la pagina web
     Given Quiero visualizar informacion
@@ -18,7 +18,7 @@ Feature: Mostrar Información General
     Then Se debe validar que se ingrese correctamente a la pagina web
 
     Examples:
-      | pagina               |
+      |pagina|
       |https://www.facebook.com/|
 
 

@@ -12,8 +12,8 @@ Feature: Cotizar productos enviar.
       |boton2| nombre            | correo             |
       |COTIZAR| Fernando Tipan | frtipan1@gmail.com |
 
-  Scenario Outline: Validar que se pueda enviar la cotizacion
-    Given Quiero enviar la cotizacion
+  Scenario Outline: Validar que se pueda enviar la cotizacion.
+    Given Quiero enviar la cotizacion.
     When Doy click en el bot2 "<boton2>" se envian los datos nombre "<nombre>" y correo "<correo>".
     Then Se debe validar que los productos y datos se envien correctamente de la lista.
 
