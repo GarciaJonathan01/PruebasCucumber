@@ -7,6 +7,7 @@ Feature: Mostrar Galeria de Productos
     Given Quiero verificar la galeria de procesos
     When Selecciono una imagen o video de la galeria "<imagen>"
     Then El modal deberia mostrar la imagen o video correctamente
+
     Examples:
       | imagen |
       |    1   |
@@ -15,6 +16,7 @@ Feature: Mostrar Galeria de Productos
     Given Quiero verificar la galeria de procesos
     When Selecciono una imagen o video de la galeria "<imagen>"
     Then El modal deberia mostrar la imagen o video correctamente
+
     Examples:
       | imagen |
       |    2   |

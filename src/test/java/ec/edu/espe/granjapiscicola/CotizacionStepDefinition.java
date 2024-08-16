@@ -61,7 +61,6 @@ public class CotizacionStepDefinition extends BasicStepDefinition {
             }
 
             if (targetButton != null) {
-                targetButton.click();
                 addText("Se coloca en la lista");
             } else {
                 addText("Error: No se encontró el botón con el texto: " + bot1);
