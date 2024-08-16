@@ -82,30 +82,24 @@ public class CotizacionStepDefinition extends BasicStepDefinition {
 
     @Then("Se debe validar que los productos se ingresen correctamente en la lista")
     public void se_debe_validar_que_los_productos_se_ingresen_correctamente_en_la_lista() {
-        try {
-            // Localizar el contenedor de la lista de productos cotizados
-            WebElement productListContainer = driver.findElement(By.id("productListItems"));
 
-            // Obtener todos los elementos dentro de la lista
-            List<WebElement> productItems = productListContainer.findElements(By.tagName("li"));
+        // Localizar el contenedor de la lista de productos cotizados
+        WebElement productListContainer = driver.findElement(By.id("productListItems"));
 
-            // Verificar si la lista contiene productos cotizados
-            if (productItems.size() > 0) {
-                addText("La lista de productos cotizados contiene " + productItems.size() + " elementos.");
-            } else {
-                addText("Error: La lista de productos cotizados está vacía.");
-                captureScreenShot();
-                driver.quit();
-                closePDF();
-                fail("No se ingresaron productos en la lista.");
-            }
-        } catch (Exception e) {
-            addText("Error durante la validación de productos en la lista: " + e.getMessage());
+        // Obtener todos los elementos dentro de la lista
+        List<WebElement> productItems = productListContainer.findElements(By.tagName("li"));
+
+        // Verificar si la lista contiene productos cotizados
+        if (productItems.size() > 0) {
+            addText("La lista de productos cotizados contiene " + productItems.size() + " elementos.");
+        } else {
+            addText("Error: La lista de productos cotizados está vacía.");
             captureScreenShot();
             driver.quit();
             closePDF();
-            fail("Ocurrió un error al intentar validar la lista de productos.");
+            fail("No se ingresaron productos en la lista.");
         }
+
         addText("Fin de la prueba");
         driver.quit();
         closePDF();
