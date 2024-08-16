@@ -36,7 +36,7 @@ public class CotizacionStepDefinition extends BasicStepDefinition {
             captureScreenShot();
             driver.quit();
             closePDF();
-            fail("No se pudo cargar la página correctamente.");
+            fail("No se pudo cargar la pagina correctamente.");
 
         }
     }
@@ -68,14 +68,14 @@ public class CotizacionStepDefinition extends BasicStepDefinition {
                 addText("Fin de la prueba");
                 driver.quit();
                 closePDF();
-                fail("No se encontró el botón con el texto: " + bot1);
+                fail("No se encontro el boton con el texto: " + bot1);
             }
         } catch (Exception e) {
             addText("Error: No se pudo hacer clic en el botón: " + e.getMessage());
             captureScreenShot();
             driver.quit();
             closePDF();
-            fail("No se pudo hacer clic en el botón.");
+            fail("No se pudo hacer clic en el boton.");
         }
         wait(1);
         captureScreenShot();
@@ -105,7 +105,7 @@ public class CotizacionStepDefinition extends BasicStepDefinition {
             captureScreenShot();
             driver.quit();
             closePDF();
-            fail("Ocurrió un error al intentar validar la lista de productos.");
+            fail("Ocurrio un error al intentar validar la lista de productos.");
         }
         addText("Fin de la prueba");
         driver.quit();

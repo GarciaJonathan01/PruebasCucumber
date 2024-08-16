@@ -50,7 +50,7 @@ public class InformacionGeneralStepDefinition extends BasicStepDefinition {
             addText("Fin de la prueba");
             driver.quit();
             closePDF();
-            fail("Pagina no válida.");
+            fail("Pagina no valida.");
         }
         addText("Fin de la prueba");
         driver.quit();

@@ -44,7 +44,7 @@ public class CotizacionAceptarStepDefinition extends BasicStepDefinition {
             captureScreenShot();
             driver.quit();
             closePDF();
-            fail("No se pudo cargar la página correctamente.");
+            fail("No se pudo cargar la pagina correctamente.");
 
         }
     }
@@ -73,17 +73,17 @@ public class CotizacionAceptarStepDefinition extends BasicStepDefinition {
                 wait(1);
                 captureScreenShot();
             } else {
-                addText("Error: No se encontró el botón con el texto: " + bot2);
+                addText("Error: No se encontro el boton con el texto: " + bot2);
                 driver.quit();
                 closePDF();
-                fail("No se encontró el botón con el texto: " + bot2);
+                fail("No se encontro el boton con el texto: " + bot2);
             }
         } catch (Exception e) {
-            addText("Error: No se pudo hacer clic en el botón: " + e.getMessage());
+            addText("Error: No se pudo hacer clic en el boton: " + e.getMessage());
             captureScreenShot();
             driver.quit();
             closePDF();
-            fail("No se pudo hacer clic en el botón.");
+            fail("No se pudo hacer clic en el boton.");
         }
         try {
             addText("Ingresamos los datos del formulario con los datos esperados: "+nombre1+", "+correo1+", "+bot2+".");
@@ -121,7 +121,7 @@ public class CotizacionAceptarStepDefinition extends BasicStepDefinition {
                 addText("Fin de la prueba");
                 driver.quit();
                 closePDF();
-                fail("Correo electrónico no válido.");
+                fail("Correo electronico no valido.");
             }
             if (isValidName(nam)) {
                 addText("Nombre validado correctamente.");
@@ -135,7 +135,7 @@ public class CotizacionAceptarStepDefinition extends BasicStepDefinition {
                 addText("Fin de la prueba");
                 driver.quit();
                 closePDF();
-                fail("Nombre no válido.");
+                fail("Nombre no valido.");
             }
         }catch (Exception e){
             addText("No se pudo obtener los datos " + e.getMessage());
@@ -155,7 +155,7 @@ public class CotizacionAceptarStepDefinition extends BasicStepDefinition {
             if (productItems.size() > 0) {
                 addText("La lista de productos cotizados contiene " + productItems.size() + " elementos.");
             } else {
-                addText("Error: La lista de productos cotizados está vacía.");
+                addText("Error: La lista de productos cotizados está vacia.");
                 captureScreenShot();
                 driver.quit();
                 closePDF();
@@ -167,10 +167,10 @@ public class CotizacionAceptarStepDefinition extends BasicStepDefinition {
             captureScreenShot();
             driver.quit();
             closePDF();
-            fail("Ocurrió un error al intentar validar la lista de productos.");
+            fail("Ocurrio un error al intentar validar la lista de productos.");
         }
 
-        addText("Una vez ingresado los datos, el sistema valida la información y la lista de productos");
+        addText("Una vez ingresado los datos, el sistema valida la informacion y la lista de productos");
         addText("Se da click en enviar cotización");
 
         submitButton.click();
@@ -198,7 +198,7 @@ public class CotizacionAceptarStepDefinition extends BasicStepDefinition {
             addText("Fin de la prueba");
             driver.quit();
             closePDF();
-            fail("No estamos en la página de WhatsApp Web");
+            fail("No estamos en la pagina de WhatsApp Web");
         }
         else {
             wait(2);
