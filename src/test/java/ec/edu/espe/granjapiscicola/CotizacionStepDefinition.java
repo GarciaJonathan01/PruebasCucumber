@@ -61,6 +61,7 @@ public class CotizacionStepDefinition extends BasicStepDefinition {
             }
 
             if (targetButton != null) {
+                targetButton.click();
                 addText("Se coloca en la lista");
             } else {
                 addText("Error: No se encontró el botón con el texto: " + bot1);
@@ -82,24 +83,30 @@ public class CotizacionStepDefinition extends BasicStepDefinition {
 
     @Then("Se debe validar que los productos se ingresen correctamente en la lista")
     public void se_debe_validar_que_los_productos_se_ingresen_correctamente_en_la_lista() {
+        try {
+            // Localizar el contenedor de la lista de productos cotizados
+            WebElement productListContainer = driver.findElement(By.id("productListItems"));
 
-        // Localizar el contenedor de la lista de productos cotizados
-        WebElement productListContainer = driver.findElement(By.id("productListItems"));
+            // Obtener todos los elementos dentro de la lista
+            List<WebElement> productItems = productListContainer.findElements(By.tagName("li"));
 
-        // Obtener todos los elementos dentro de la lista
-        List<WebElement> productItems = productListContainer.findElements(By.tagName("li"));
-
-        // Verificar si la lista contiene productos cotizados
-        if (productItems.size() > 0) {
-            addText("La lista de productos cotizados contiene " + productItems.size() + " elementos.");
-        } else {
-            addText("Error: La lista de productos cotizados está vacía.");
+            // Verificar si la lista contiene productos cotizados
+            if (productItems.size() > 0) {
+                addText("La lista de productos cotizados contiene " + productItems.size() + " elementos.");
+            } else {
+                addText("Error: La lista de productos cotizados está vacía.");
+                captureScreenShot();
+                driver.quit();
+                closePDF();
+                fail("No se ingresaron productos en la lista.");
+            }
+        } catch (Exception e) {
+            addText("Error durante la validación de productos en la lista: " + e.getMessage());
             captureScreenShot();
             driver.quit();
             closePDF();
-            fail("No se ingresaron productos en la lista.");
+            fail("Ocurrió un error al intentar validar la lista de productos.");
         }
-
         addText("Fin de la prueba");
         driver.quit();
         closePDF();
