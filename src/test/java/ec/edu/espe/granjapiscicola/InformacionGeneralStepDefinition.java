@@ -40,7 +40,7 @@ public class InformacionGeneralStepDefinition extends BasicStepDefinition {
         String currentUrl = driver.getCurrentUrl();
 
         String specificUrl = "file:///C:/Users/noobp/OneDrive/Escritorio/Requisitos%20(2)/Requisitos/Pagina_Inicial.html";
-        if (currentUrl.equals(pag)) {
+        if (specificUrl.equals(pag)) {
             addText("Pagina correcta.");
             captureScreenShot();
 

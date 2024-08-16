@@ -10,7 +10,7 @@ Feature: Comunicarse con el vendedor
 
     Examples:
       | nombre          | correo                 | comentario        |
-      | Jonathan Garcia | jdgarcia15@hotmail.com | Deseo información |
+      | Jonathan Garcia | jdgarcia15@hotmail.com | Deseo informacion |
 
   Scenario Outline: Validar que se pueda ingresar datos como nombre, correo electronico y comentarios
     Given Quiero comunicarme con el vendedor
@@ -19,8 +19,8 @@ Feature: Comunicarse con el vendedor
 
     Examples:
       | nombre            | correo             | comentario        |
-      | Fernando Tipan843 | frtipan1@gmail.com | Deseo información |
-      | John Limones | jjlimones@espe.crud | Deseo información |
+      | Fernando Tipan843 | frtipan1@gmail.com | Deseo informacion |
+      | John Limones | jjlimones@espe.crud | Deseo informacion |
 
 
 
