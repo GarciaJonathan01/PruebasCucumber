@@ -41,8 +41,6 @@ public class LoginStepDefinition extends BasicStepDefinition {
         inputComment.sendKeys(comentario);
         nam=nombre;
         crr=correo;
-
-
         wait(1);
         captureScreenShot();
         submitButton.click();
@@ -65,6 +63,7 @@ public class LoginStepDefinition extends BasicStepDefinition {
         } else {
             addText("Nombre no válido. Contiene caracteres no permitidos: " + nam);
             captureScreenShot();
+            addText("Fin de la prueba");
             driver.quit();
             closePDF();
             fail("Nombre no valido.");
